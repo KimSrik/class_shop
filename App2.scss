@@ -1,0 +1,34 @@
+@mixin 함수{
+    font-weight: 900;
+    font-size: 60px;
+    color: $mainColor;
+}
+
+
+@import './App.css';
+
+$mainColor: #f00;
+$subColor: #00f;
+
+.App{
+    color: $mainColor;
+    font-weight: 900;
+    font-size: 60px;
+}
+.App{
+    ul{
+        li:nth-child(3){
+            ol{
+                li{
+                    color: $subColor;
+                }
+            }
+        }
+    }
+}
+
+h2{
+    // @extend.App;
+    @include 함수();
+}
+
